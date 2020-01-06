@@ -7,8 +7,7 @@ import Profile from "@/views/Profile/Profile.vue";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "home",
     component: Home
@@ -27,6 +26,16 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile
+  },
+  {
+    path: "/report",
+    name: "Report",
+    component: () => import( /* webpackChunkName: "about" */ '../views/Home/components/Report.vue')
+  },
+  {
+    path: "/Login",
+    name: "login",
+    component: () => import( /* webpackChunkName: "about" */ '../views/Login/Login.vue')
   }
 ];
 

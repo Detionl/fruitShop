@@ -11,6 +11,10 @@ import "@/assets/js/rem.js";
 import Vant from "vant";
 import "vant/lib/index.css";
 Vue.use(Vant);
+
+//导入axios请求库
+import axios from 'axios'
+Vue.prototype.$axios = axios;
 new Vue({
   router,
   store,
